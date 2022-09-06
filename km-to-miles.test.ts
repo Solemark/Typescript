@@ -4,7 +4,7 @@ import { convertDistance } from './km-to-miles'
 const km: number = 10
 const m: number = 10
 const ktm: number = 0.6213712
-var mtk: number = 1.609344
+const mtk: number = 1.609344
 
 describe('Convert distance', () => {
     test('km to miles', () => {
