@@ -1,18 +1,18 @@
 export const fizzBuzz = (max: number, fizz: number, buzz: number) => {
     var output: string = ''
-    var s: string = ''
+    var str: string = ''
     for (var i: number = 1; i <= max; i++) {
-        s = ''
+        str = ''
         if (i % fizz == 0) {
-            s += 'fizz'
+            str += 'fizz'
         }
         if (i % buzz == 0) {
-            s += 'buzz'
+            str += 'buzz'
         }
-        if (s == '') {
-            s += i
+        if (str == '') {
+            str += i
         }
-        output += s + '\n'
+        output += str + '\n'
     }
     return output
 }

@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals'
-import { sum, sumArray } from './sum-recursive'
+import { sum, sumArray } from './recursive-sum'
 
 describe('tests the sum function', () => {
     test('check if the total of the sum function is not null', () => {

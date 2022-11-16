@@ -1,0 +1,35 @@
+export const checkTime = () => {
+    var date: Date = new Date()
+    var output: string = ''
+
+    output += 'day: ' + checkDay(date.getDay())
+    output += '\ndate: ' + date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear()
+    output += '\ntime: '
+
+    if (date.getHours() > 12) {
+        output += date.getHours() - 12
+    } else {
+        output += date.getHours()
+    }
+    output += ':' + date.getMinutes()
+    return output
+}
+
+const checkDay = (day: number) => {
+    switch (day) {
+        case 0:
+            return 'Sunday'
+        case 1:
+            return 'Monday'
+        case 2:
+            return 'Tuesday'
+        case 3:
+            return 'Wednesday'
+        case 4:
+            return 'Thursday'
+        case 5:
+            return 'Friday'
+        case 6:
+            return 'Saturday'
+    }
+}

@@ -9,7 +9,7 @@ export const sortRecursive = (arr: number[], c: number) => {
         if (x > y) {
             arr[c] = y
             arr[c + 1] = x
-            return sortRecursive(arr, 0)
+            return sortRecursive(arr, c - 1)
         }
         return sortRecursive(arr, c + 1)
     }
