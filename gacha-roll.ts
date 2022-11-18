@@ -1,9 +1,9 @@
 export const gachaRoll = (game: string) => {
-    var rollCount: number = 0
-    var c: number = 0
-    var chance: number = 0
-    var pity: number = 0
-    var rarity: string = ''
+    let rollCount = 0
+    let c = 0
+    let chance = 0
+    let pity = 0
+    let rarity = ''
 
     if (game == 'FGO') {
         chance = 100

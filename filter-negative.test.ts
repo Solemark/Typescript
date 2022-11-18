@@ -1,10 +1,8 @@
-import { describe, expect, test } from '@jest/globals'
-import { filterNegative } from './filter-negative'
+import { assertEquals } from "https://deno.land/std@0.165.0/testing/asserts.ts"
+import { filterNegative } from './filter-negative.ts'
 
-var a1: number[] = [-1, 2, 3, 4, -5, 6, 7, -8, 9, 10]
+const a1: number[] = [-1, 2, 3, 4, -5, 6, 7, -8, 9, 10]
 
-describe('Remove odd numbers from sequence', () => {
-    test('Print 2, 4, 6, 8, 10', () => {
-        expect(filterNegative(a1)).toEqual([2, 3, 4, 6, 7, 9, 10])
-    })
+Deno.test(function remove_negative_numbers(){
+    assertEquals(filterNegative(a1), [2, 3, 4, 6, 7, 9, 10])
 })

@@ -11,8 +11,8 @@ export const checkPalindrome = (str: string): boolean => {
 }
 
 const reverseString = (str: string): string => {
-    var output: string = ""
-    for(var i: number = str.length-1; i >= 0; i--){
+    let output = ""
+    for(let i: number = str.length-1; i >= 0; i--){
         output += str[i]
     }
     return output

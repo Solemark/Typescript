@@ -1,6 +1,6 @@
-var x: number = 0
-var y: number = 0
-export const sortRecursive = (arr: number[], c: number) => {
+let x = 0
+let y = 0
+export const sortRecursive = (arr: number[], c: number): number[] => {
     if (c >= arr.length) {
         return arr
     } else {

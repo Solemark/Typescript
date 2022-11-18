@@ -9,8 +9,12 @@ run files with;
     node $name
     OR
     npm start $name
+    OR
+    deno run $name
 where $name is the filename
 
 run tests with
     npm test $name
+    OR
+    deno test $name
 where $name is the filename. $name is optional!

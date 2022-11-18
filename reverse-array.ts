@@ -1,7 +1,7 @@
 export const reverseArray = (a1: number[]) => {
-    var a2: number[] = []
-    var c: number = a1.length - 1
-    for (let i: number = 0; i < a1.length; i++) {
+    const a2: number[] = []
+    let c: number = a1.length - 1
+    for (let i = 0; i < a1.length; i++) {
         a2.push(a1[c])
         c--
     }
@@ -9,10 +9,10 @@ export const reverseArray = (a1: number[]) => {
 }
 
 export const reverseSingleArray = (a1: number[]) => {
-    var c: number = a1.length - 1
-    var x: number = 0
-    var y: number = 0
-    for (var i: number = 0; i <= c; i++) {
+    let c: number = a1.length - 1
+    let x = 0
+    let y = 0
+    for (let i = 0; i <= c; i++) {
         x = a1[i]
         y = a1[c]
         a1[c] = x

@@ -1,1 +1,1 @@
-export const convertDistance = (a: number, b: number) => a * b
+export const convertDistance = (a: number, b: number): number => a * b

@@ -1,66 +1,45 @@
-import { describe, expect, test } from '@jest/globals'
-import { multiply, division, addition, subtraction } from './calc'
+import { assertEquals } from "https://deno.land/std@0.165.0/testing/asserts.ts"
+import { multiply, division, addition, subtraction } from './calc.ts'
 
-const x: number = 2
-const y: number = 5
-var testString: string = ''
+const x = 2
+const y = 5
 
-describe('multiply based on 2 numbers', () => {
-    testString = x + ' * ' + y
-    test(testString, () => {
-        expect(multiply(x, y)).toBe(10)
-    })
-    testString = x + ' * ' + -y
-    test(testString, () => {
-        expect(multiply(x, -y)).toBe(-10)
-    })
-    testString = -x + ' * ' + -y
-    test(testString, () => {
-        expect(multiply(-x, -y)).toBe(10)
-    })
+Deno.test(function multiply_2_and_5(){
+    assertEquals(multiply(x, y), 10)
+})
+Deno.test(function multiply_2_and_negative_5(){
+    assertEquals(multiply(x, -y), -10)
+})
+Deno.test(function multiply_negative_2_and_negative_5(){
+    assertEquals(multiply(-x, -y), 10)
 })
 
-describe('divide based on 2 numbers', () => {
-    testString = x + ' / ' + y
-    test(testString, () => {
-        expect(division(x, y)).toBe(0.4)
-    })
-    testString = x + ' / ' + -y
-    test(testString, () => {
-        expect(division(x, -y)).toBe(-0.4)
-    })
-    testString = -x + ' / ' + -y
-    test(testString, () => {
-        expect(division(-x, -y)).toBe(0.4)
-    })
+Deno.test(function divide_2_and_5(){
+    assertEquals(division(x, y), 0.4)
+})
+Deno.test(function divide_2_and_negative_5(){
+    assertEquals(division(x, -y), -0.4)
+})
+Deno.test(function divide_negative_2_and_negative_5(){
+    assertEquals(division(-x, -y), 0.4)
 })
 
-describe('Addition based on 2 numbers', () => {
-    testString = x + ' + ' + y
-    test(testString, () => {
-        expect(addition(x, y)).toBe(7)
-    })
-    testString = x + ' + ' + -y
-    test(testString, () => {
-        expect(addition(x, -y)).toBe(-3)
-    })
-    testString = -x + ' + ' + -y
-    test(testString, () => {
-        expect(addition(-x, -y)).toBe(-7)
-    })
+Deno.test(function add_2_and_5(){
+    assertEquals(addition(x, y), 7)
+})
+Deno.test(function add_2_and_negative_5(){
+    assertEquals(addition(x, -y), -3)
+})
+Deno.test(function add_negative_2_and_negative_5(){
+    assertEquals(addition(-x, -y), -7)
 })
 
-describe('Subtraction based on 2 numbers', () => {
-    testString = x + ' - ' + y
-    test('2 - 5', () => {
-        expect(subtraction(x, y)).toBe(-3)
-    })
-    testString = x + ' - ' + -y
-    test(testString, () => {
-        expect(subtraction(x, -y)).toBe(7)
-    })
-    testString = -x + ' - ' + -y
-    test(testString, () => {
-        expect(subtraction(-x, -y)).toBe(3)
-    })
+Deno.test(function subtract_2_and_5(){
+    assertEquals(subtraction(x, y), -3)
+})
+Deno.test(function subtract_2_and_negative_5(){
+    assertEquals(subtraction(x, -y), 7)
+})
+Deno.test(function subtract_negative_2_and_negative_5(){
+    assertEquals(subtraction(-x, -y), 3)
 })

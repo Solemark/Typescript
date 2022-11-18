@@ -1,16 +1,14 @@
-import { describe, expect, test } from '@jest/globals'
-import { convertDistance } from './km-to-miles'
+import { assertEquals } from "https://deno.land/std@0.165.0/testing/asserts.ts"
+import { convertDistance } from './km-to-miles.ts'
 
-const km: number = 10
-const m: number = 10
-const ktm: number = 0.6213712
-const mtk: number = 1.609344
+const km= 10
+const m = 10
+const ktm = 0.6213712
+const mtk = 1.609344
 
-describe('Convert distance', () => {
-    test('km to miles', () => {
-        expect(convertDistance(km, ktm)).toBe(6.213712)
-    })
-    test('miles to km', () => {
-        expect(convertDistance(m, mtk)).toBe(16.09344)
-    })
+Deno.test(function km_to_miles(){
+    assertEquals(convertDistance(km, ktm), 6.213712)
+})
+Deno.test(function miles_to_km(){
+    assertEquals(convertDistance(m, mtk), 16.09344)
 })

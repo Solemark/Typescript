@@ -1,6 +1,6 @@
-export const printEvens = (max: number) => {
-    var output: string = ''
-    for (var i = 0; i <= max; i++) {
+export const printEvens = (max: number): string => {
+    let output = ''
+    for (let i = 0; i <= max; i++) {
         if (i % 2 == 0) {
             output += i + '\n'
         }

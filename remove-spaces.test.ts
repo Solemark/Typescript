@@ -1,10 +1,8 @@
-import { describe, expect, test } from '@jest/globals'
-import { removeSpaces } from './remove-spaces'
+import { assertEquals } from "https://deno.land/std@0.165.0/testing/asserts.ts"
+import { removeSpaces } from './remove-spaces.ts'
 
-var str: string = 'Hello  world!    How     are      you      today?'
+const str = 'Hello  world!    How     are      you      today?'
 
-describe('Remove spaces from string', () => {
-    test('Remove spaces from Hello World string', () => {
-        expect(removeSpaces(str)).toBe('Helloworld!Howareyoutoday?')
-    })
+Deno.test(function remove_spaces(){
+    assertEquals(removeSpaces(str), 'Helloworld!Howareyoutoday?')
 })

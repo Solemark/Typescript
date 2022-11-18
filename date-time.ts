@@ -1,9 +1,9 @@
 export const checkTime = () => {
-    var date: Date = new Date()
-    var output: string = ''
+    const date: Date = new Date()
+    let output = ''
 
     output += 'day: ' + checkDay(date.getDay())
-    output += '\ndate: ' + date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear()
+    output += '\ndate: ' + date.getDate() + '/' + (date.getMonth() + 1) + '/' + date.getFullYear()
     output += '\ntime: '
 
     if (date.getHours() > 12) {

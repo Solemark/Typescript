@@ -1,14 +1,12 @@
-import { describe, expect, test } from '@jest/globals'
-import { gachaRoll } from './gacha-roll'
+import { assertStringIncludes } from "https://deno.land/std@0.165.0/testing/asserts.ts"
+import { gachaRoll } from './gacha-roll.ts'
 
-describe('Check the gacha roll', () => {
-    test('do a gacha roll on Fate Grand Order', () => {
-        expect(gachaRoll('FGO')).toContain('FGO')
-    })
-    test('do a gacha roll on Arknights', () => {
-        expect(gachaRoll('AK')).toContain('AK')
-    })
-    test('do a gacha roll on Genshin Impact', () => {
-        expect(gachaRoll('GI')).toContain('GI')
-    })
+Deno.test(function FGO_gacha_roll(){
+    assertStringIncludes(gachaRoll('FGO'), 'FGO')
+})
+Deno.test(function AK_gacha_roll(){
+    assertStringIncludes(gachaRoll('AK'), 'AK')
+})
+Deno.test(function GI_gacha_roll(){
+    assertStringIncludes(gachaRoll('GI'), 'GI')
 })

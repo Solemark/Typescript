@@ -1,4 +1,4 @@
-export const sum = (n: number, result: number) => {
+export const sum = (n: number, result: number): number => {
     if (n <= 0) {
         return result
     } else {
@@ -7,7 +7,7 @@ export const sum = (n: number, result: number) => {
     }
 }
 
-export const sumArray = (arr: number[], n: number, result: number) => {
+export const sumArray = (arr: number[], n: number, result: number): number => {
     if (n < 0) {
         return result
     }

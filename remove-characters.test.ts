@@ -1,11 +1,10 @@
-import { describe, expect, test } from '@jest/globals'
-import { removeCharacters } from './remove-characters'
+import { assertEquals } from "https://deno.land/std@0.165.0/testing/asserts.ts"
+import { removeCharacters } from './remove-characters.ts'
 
-var s: string = 'Hello! My name is Mason'
-var letters: string[] = ['m', '!', ' ']
+const s = 'Hello! My name is Mason'
+const letters: string[] = ['m', '!', ' ']
 
-describe('Remove characters from string', () => {
-    test('Removes m, ! and spaces from string', () => {
-        expect(removeCharacters(s, letters)).toBe('Helloynaeisason')
-    })
+Deno.test(function remove_characters_from_string(){
+    assertEquals(removeCharacters(s, letters), 'Helloynaeisason')
+
 })

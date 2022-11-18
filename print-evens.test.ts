@@ -1,10 +1,8 @@
-import { describe, expect, test } from '@jest/globals'
-import { printEvens } from './print-evens'
+import { assertEquals } from "https://deno.land/std@0.165.0/testing/asserts.ts"
+import { printEvens } from './print-evens.ts'
 
-const max: number = 10
+const max = 10
 
-describe('Remove odd numbers from sequence', () => {
-    test('Print 2, 4, 6, 8, 10', () => {
-        expect(printEvens(max)).toBe('0\n2\n4\n6\n8\n10\n')
-    })
+Deno.test(function print_even_numbers() {
+    assertEquals(printEvens(max), '0\n2\n4\n6\n8\n10\n')
 })

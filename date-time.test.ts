@@ -1,8 +1,6 @@
-import { describe, expect, test } from '@jest/globals'
-import { checkTime } from './date-time'
+import { assertEquals } from "https://deno.land/std@0.165.0/testing/asserts.ts"
+import { checkTime } from './date-time.ts'
 
-describe('check date', () => {
-    test('check current date', () => {
-        expect(checkTime()).toBe('day: Monday\ndate: 14/10/2022\ntime: 4:32')
-    })
+Deno.test(function check_current_date(){
+    assertEquals(checkTime(), 'day: Friday\ndate: 18/11/2022\ntime: 3:23')
 })
