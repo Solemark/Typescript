@@ -1,0 +1,16 @@
+<div>
+  <button (click)="getData()">Get User Data</button>
+</div>
+<div>
+  <tbody>
+    <tr *ngFor="let user of data">
+      <img src="{{ user.picture.thumbnail }}" alt="" />
+      {{
+        user.name.first
+      }}
+      {{
+        user.name.last
+      }}
+    </tr>
+  </tbody>
+</div>

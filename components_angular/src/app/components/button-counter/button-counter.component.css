@@ -1,0 +1,11 @@
+div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  padding-block: 1em;
+  padding-inline: 1em;
+}
+.button-div button {
+  margin-inline: 0.5em;
+}
