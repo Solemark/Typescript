@@ -1,7 +1,7 @@
 Typescript/Javascript Practice
 
 TS/JS files do not run natively!
-Need a runner like NodeJs to run these files
+Need a runner like NodeJs or Deno to run these files
 
 run files with;
 
