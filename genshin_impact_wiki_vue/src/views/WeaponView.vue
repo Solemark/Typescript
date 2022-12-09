@@ -1,6 +1,3 @@
-<script lang="ts">
-</script>
+<script lang="ts"></script>
 
-<template>
-    Weapons
-</template>
+<template>Weapons</template>

@@ -1,6 +1,3 @@
-<script lang="ts">
-</script>
+<script lang="ts"></script>
 
-<template>
-    Artifacts
-</template>
+<template>Artifacts</template>
