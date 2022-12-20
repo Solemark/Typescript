@@ -11,11 +11,11 @@ run files with;
     OR
     npm start name
     OR
-    deno run name
+    deno run name.ts
 
 run tests with;
 
     npm test name
     OR
-    deno test name
+    deno test name.ts
 name is optional for tests!
