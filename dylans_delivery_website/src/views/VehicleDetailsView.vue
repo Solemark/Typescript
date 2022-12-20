@@ -28,12 +28,14 @@
 <style>
     h1 {
         color: white;
+        text-align: center;
     }
     .flexbox {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         gap: 1rem;
+        justify-content: center;
     }
     .card {
         background-color: #0e1013;
