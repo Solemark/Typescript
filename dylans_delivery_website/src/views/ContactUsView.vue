@@ -11,8 +11,10 @@
 <style>
     h1 {
         color: white;
+        text-align: center;
     }
     p {
         color: white;
+        text-align: center;
     }
 </style>
