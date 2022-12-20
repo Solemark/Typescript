@@ -5,5 +5,6 @@
 <style>
     p {
         color: white;
+        text-align: center;
     }
 </style>
