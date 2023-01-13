@@ -1,5 +1,6 @@
 <script lang="ts">
     import CharacterCard from '../components/CharacterCard.vue'
+    import SearchFields from '../components/SearchFields.vue'
     export default {
         data() {
             return {
@@ -53,12 +54,15 @@
                     console.log('error:', err)
                 })
         },
-        components: { CharacterCard },
+        components: { CharacterCard, SearchFields },
     }
 </script>
 
 <template>
     <h1>Characters</h1>
+    <div class="flexbox">
+        <SearchFields />
+    </div>
     <div class="flexbox">
         <div v-for="character in characters">
             <CharacterCard v-bind:character="character" />
