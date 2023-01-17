@@ -1,4 +1,4 @@
-export const checkTime = () => {
+export const checkTime = (): string => {
     const date: Date = new Date()
     let output = ''
 
@@ -15,7 +15,7 @@ export const checkTime = () => {
     return output
 }
 
-const checkDay = (day: number) => {
+const checkDay = (day: number): string | undefined => {
     switch (day) {
         case 0:
             return 'Sunday'

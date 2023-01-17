@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.165.0/testing/asserts.ts"
+import { assertEquals } from 'https://deno.land/std@0.173.0/testing/asserts.ts'
 import { sum, sumArray } from './recursive-sum.ts'
 
 Deno.test(function sum_between_7_and_0() {
