@@ -9,20 +9,18 @@ if using Deno be sure to use;
 
 run files with;
     
-    deno run $name
+    deno run <name>
     OR
-    ts-node $name
+    ts-node <name>
     OR
-    node $name
+    node <name>
     OR
-    npm start $name
+    npm start <name>
     
-where $name is the filename
-
 run tests with
 
-    deno test $name
+    deno test <name>
     OR
-    npm test $name
+    npm test <name>
     
-where $name is the filename. $name is optional!
+name is optional!
