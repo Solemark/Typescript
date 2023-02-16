@@ -1,5 +1,5 @@
 import { assertStringIncludes } from 'https://deno.land/std@0.173.0/testing/asserts.ts'
-import { gachaRoll } from './gacha-roll.ts'
+import { gachaRoll } from './gacha_roll.ts'
 
 Deno.test(function FGO_gacha_roll() {
     assertStringIncludes(gachaRoll('FGO'), 'FGO')

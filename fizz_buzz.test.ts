@@ -1,5 +1,5 @@
 import { assertEquals } from 'https://deno.land/std@0.173.0/testing/asserts.ts'
-import { fizzBuzz } from './fizz-buzz.ts'
+import { fizzBuzz } from './fizz_buzz.ts'
 
 const max = 20
 const fizz = 3

@@ -1,5 +1,5 @@
 import { assertEquals } from 'https://deno.land/std@0.173.0/testing/asserts.ts'
-import { sumArray } from './sum-array.ts'
+import { sumArray } from './sum_array.ts'
 
 const a1: number[] = [1, 2, 3, 4, 5]
 const a2: number[] = [-5, -12, 23, 62, -100, 71]

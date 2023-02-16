@@ -1,5 +1,5 @@
 import { assertEquals } from 'https://deno.land/std@0.173.0/testing/asserts.ts'
-import { numericalSort } from './numerical-sort.ts'
+import { numericalSort } from './numerical_sort.ts'
 
 const a1: number[] = [5, 2, 1, 3, 6, 4, 10, 9, 8, 7]
 

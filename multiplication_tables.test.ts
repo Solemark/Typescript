@@ -1,5 +1,5 @@
 import { assertEquals } from 'https://deno.land/std@0.173.0/testing/asserts.ts'
-import { outputTable } from './multiplication-tables.ts'
+import { outputTable } from './multiplication_tables.ts'
 
 Deno.test(function print_1_times_table_upto_12() {
     assertEquals(outputTable(1, 12), ['1 x 0 = 0', '1 x 1 = 1', '1 x 2 = 2', '1 x 3 = 3', '1 x 4 = 4', '1 x 5 = 5', '1 x 6 = 6', '1 x 7 = 7', '1 x 8 = 8', '1 x 9 = 9', '1 x 10 = 10', '1 x 11 = 11', '1 x 12 = 12'])

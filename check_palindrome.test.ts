@@ -1,5 +1,5 @@
 import { assertEquals } from 'https://deno.land/std@0.173.0/testing/asserts.ts'
-import { checkPalindrome } from './check-palindrome.ts'
+import { checkPalindrome } from './check_palindrome.ts'
 
 Deno.test(function DAD_is_palindrome() {
     assertEquals(checkPalindrome('DAD'), true)
