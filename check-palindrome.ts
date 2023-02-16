@@ -1,19 +1,16 @@
 export const checkPalindrome = (str: string): boolean => {
+    let x = 0
+    let y = str.length - 1
     if(typeof str === 'string'){
-        if(str.toUpperCase() == reverseString(str.toUpperCase())){
-            return true
-        } else{
-            return false
+        while(x < y){
+            if(str[x] != str[y]){
+                return false
+            }
+            x++
+            y--
         }
+        return true
     }else{
         return false
     }
-}
-
-const reverseString = (str: string): string => {
-    let output = ""
-    for(let i: number = str.length-1; i >= 0; i--){
-        output += str[i]
-    }
-    return output
 }
