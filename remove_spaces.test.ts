@@ -1,8 +1,6 @@
-import { assertEquals } from 'https://deno.land/std@0.173.0/testing/asserts.ts'
-import { removeSpaces } from './remove_spaces.ts'
+import { removeSpaces } from './remove_spaces'
 
-const str = 'Hello  world!    How     are      you      today?'
-
-Deno.test(function remove_spaces() {
-    assertEquals(removeSpaces(str), 'Helloworld!Howareyoutoday?')
+test('remove select characters from string', () => {
+    const str = 'Hello  world!    How     are      you      today?'
+    expect(removeSpaces(str)).toEqual('Helloworld!Howareyoutoday?')
 })

@@ -1,13 +1,18 @@
-import { assertEquals } from 'https://deno.land/std@0.173.0/testing/asserts.ts'
-import { sumArray } from './sum_array.ts'
+import { sumArray } from './sum_array'
 
-const a1: number[] = [1, 2, 3, 4, 5]
-const a2: number[] = [-5, -12, 23, 62, -100, 71]
+const getData = (): [number[][], number[]] => {
+    return [
+        [
+            [1, 2, 3, 4, 5],
+            [-5, -12, 23, 62, -100, 71]
+        ],
+        [15, 39]
+    ]
+}
 
-Deno.test(function test_a1_is_15() {
-    assertEquals(sumArray(a1), 15)
-})
-
-Deno.test(function test_a2_is_39() {
-    assertEquals(sumArray(a2), 39)
+test('Sum an array', () => {
+    let [input, result] = getData()
+    for (let i = 0; i < input.length; i++) {
+        expect(sumArray(input[i])).toEqual(result[i])
+    }
 })

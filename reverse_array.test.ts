@@ -1,18 +1,22 @@
-import { assertEquals } from 'https://deno.land/std@0.173.0/testing/asserts.ts'
-import { reverseArray, reverseSingleArray } from './reverse_array.ts'
+import { reverseArray, reverseSingleArray } from './reverse_array'
 
-Deno.test(function return_10_to_1() {
-    assertEquals(reverseArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]), [10, 9, 8, 7, 6, 5, 4, 3, 2, 1])
+const getData = (): number[][] => {
+    return [
+        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+        [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    ]
+}
+
+test('reverse array with second array', () => {
+    let input: number[][] = getData()
+    input.forEach(item => {
+        expect(reverseArray(item)).toEqual(item.reverse())
+    })
 })
 
-Deno.test(function return_9_to_1() {
-    assertEquals(reverseArray([1, 2, 3, 4, 5, 6, 7, 8, 9]), [9, 8, 7, 6, 5, 4, 3, 2, 1])
-})
-
-Deno.test(function return_10_to_1_single_array() {
-    assertEquals(reverseArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]), [10, 9, 8, 7, 6, 5, 4, 3, 2, 1])
-})
-
-Deno.test(function return_9_to_1_single_array() {
-    assertEquals(reverseSingleArray([1, 2, 3, 4, 5, 6, 7, 8, 9]), [9, 8, 7, 6, 5, 4, 3, 2, 1])
+test('reverse array with single array', () => {
+    let input: number[][] = getData()
+    input.forEach(item => {
+        expect(reverseSingleArray(item)).toEqual(item.reverse())
+    })
 })

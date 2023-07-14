@@ -1,6 +1,5 @@
-import { assertEquals } from 'https://deno.land/std@0.173.0/testing/asserts.ts'
-import { sortRecursive } from './recursive_sort.ts'
+import { sortRecursive } from './recursive_sort'
 
-Deno.test(function sort_array_recursively() {
-    assertEquals(sortRecursive([5, 2, 9, 7, 14, 8], 0), [2, 5, 7, 8, 9, 14])
+test('sort array recursively', () => {
+    expect(sortRecursive([5, 2, 9, 7, 14, 8], 0)).toEqual([2, 5, 7, 8, 9, 14])
 })

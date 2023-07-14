@@ -1,6 +1,5 @@
-import { assertEquals } from 'https://deno.land/std@0.173.0/testing/asserts.ts'
-import { checkTime } from './date_time.ts'
+import { checkTime } from './date_time'
 
-Deno.test(function check_current_date() {
-    assertEquals(checkTime(), 'day: Thursday\ndate: 16/2/2023\ntime: 4:31')
+test('get current datetime', () => {
+    expect(checkTime()).toBe('day: Friday\ndate: 14/7/2023\ntime: 4:57')
 })
