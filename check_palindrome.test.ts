@@ -1,17 +1,9 @@
 import { checkPalindrome } from './check_palindrome'
 
-const getData = (): [string[], boolean[]] => {
-    return [
-        [
-            'DAD',
-            'Dad',
-            'ABCDCBA',
-            'ABCDcba'
-        ], [
-            true, false, true, false
-        ]
-    ]
-}
+const getData = (): [string[], boolean[]] => [
+    ['DAD', 'Dad', 'ABCDCBA', 'ABCDcba'],
+    [true, false, true, false],
+]
 
 test('check if is palindrome', () => {
     let [input, result] = getData()
