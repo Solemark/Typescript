@@ -25,13 +25,13 @@ export const gachaRoll = (game: string) => {
         rollCount++
         c = Math.floor(Math.random() * chance + 1)
         if (c == 1) {
-            return 'It took ' + rollCount + ' rolls to get a ' + rarity + ' in ' + game
+            return `It took ${rollCount} rolls to get a ${rarity} in ${game}`
         }
         if (rollCount == pity) {
             if (game == 'AK' && rollCount > 50) {
                 chance++
             }
-            return 'You hit pity at ' + pity + ' for your ' + rarity + ' on ' + game
+            return `You hit pity at ${pity} for your ${rarity} on ${game}`
         }
     }
 }
