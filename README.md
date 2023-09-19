@@ -1,4 +1,4 @@
-Typescript/Javascript Practice
+Typescript Practice
 
 TS/JS files do not run natively!
 Need a runner like Deno or NodeJs to run these files
